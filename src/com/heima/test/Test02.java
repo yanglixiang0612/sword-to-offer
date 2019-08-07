@@ -31,7 +31,7 @@ public class Test02 {
         int newlength = str.length() + 2 * spaceNum;    //newlength为转换后str的长度
         int indexnew = newlength - 1;                   //indexnew为转换后str的下标
         str.setLength(newlength);                       //使str原来的长度扩大到转换后的长度，防止下标越界
-        for(;indexold >= 0;--indexold) {  //此处--indexold与indexold--一样
+        for(;indexold >= 0;indexold--) {  //此处--indexold与indexold--一样
             if(str.charAt(indexold) == ' ') {
                 str.setCharAt(indexnew--, '0');
                 str.setCharAt(indexnew--, '2');
@@ -43,7 +43,7 @@ public class Test02 {
         return str.toString();
     }
     //方法二：
-    public static String replaceSpace1(StringBuffer str) {
+    /*public static String replaceSpace1(StringBuffer str) {
         String s = str.toString();
         char[] arr = s.toCharArray();
         StringBuffer sb = new StringBuffer();
@@ -55,5 +55,5 @@ public class Test02 {
             }
         }
         return sb.toString();
-    }
+    }*/
 }
