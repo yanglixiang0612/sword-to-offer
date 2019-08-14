@@ -34,19 +34,19 @@ public class Test20 {
             min.push(node);
         }
     }
+
     public void pop() {
         if(data.peek() == min.peek()) {    //如果min的栈顶元素与data栈顶元素相同，同时pop;否则只弹data
             min.pop();
         }
         data.pop();
     }
+
     public int top() {
         return data.peek();
     }
+
     public int min() {
         return min.peek();
     }
-
-
-
 }

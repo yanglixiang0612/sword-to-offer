@@ -16,7 +16,7 @@ public class Test16 {
             return list1;
         }
         ListNode h = new ListNode(-1);
-        ListNode head = h;               //head暂存我新建的头节点，合并之后返回head.next，就是题目给的头节点
+        ListNode head = h;               //head暂存新建的头节点，合并之后返回head.next，就是题目给的头节点
         while(list1 != null && list2 != null) {
             if(list1.val < list2.val) {
                 head.next = list1;

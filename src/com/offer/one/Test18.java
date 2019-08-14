@@ -20,7 +20,7 @@ public class Test18 {
             Mirror(root.right);
         }
     }
-    //法二：
+    //法二：(推荐)
     public void Mirror1(TreeNode root) {
         if(root != null){
             TreeNode temp = root.left;
