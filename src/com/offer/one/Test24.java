@@ -26,6 +26,7 @@ public class Test24 {
         Collections.sort(listAll, new Comparator<ArrayList<Integer>>() {      //排序
             @Override
             public int compare(ArrayList<Integer> o1, ArrayList<Integer> o2) {
+
                 return o2.size() - o1.size();
             }
         });

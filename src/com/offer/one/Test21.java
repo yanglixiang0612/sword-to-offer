@@ -14,7 +14,7 @@ public class Test21 {
         假设有一串数字要将他们压栈: 1 2 3 4 5
         如果这个栈是很大很大，那么一次性全部压进去，再出栈：5 4 3 2 1
         但是，如果这个栈高度为4，会发生什么？ 1 2 3 4都顺利入栈，但是满了，那么要先出栈一个，才能入栈，那么就是先出4，然后压入5，随后再全部出栈：4 5 3 2 1
-        那么我总结了所有可能的出栈情况:
+        那么我总结了几种可能的出栈情况:（并非所有）
         5 4 3 2 1//栈高度为5
         4 5 3 2 1//栈高度为4
         3 4 5 2 1//栈高度为3
@@ -36,12 +36,16 @@ public class Test21 {
 		….
 		依次执行，最后辅助栈为空。如果不为空说明弹出序列不是该栈的弹出顺序。
 	*/
+
+
     public boolean IsPopOrder(int[] pushA, int[] popA) {
         if(pushA.length == 0 || popA.length == 0) {
             return false;
         }
         Stack<Integer> s = new Stack<>();
         int popIndex = 0;					 //用于标识弹出序列的位置
+
+        //保证先进后出的情况下，在入栈过程中可随时出栈
         for (int i = 0; i < pushA.length; i++) {
             s.push(pushA[i]);
             while(!s.empty() && s.peek() == popA[popIndex]) {			//如果栈不为空，且栈顶元素等于弹出序列
