@@ -9,7 +9,7 @@ class RandomListNode{
         this.val = val;
     }
 }
-public class Test05 {
+public class Test25 {
     public static void main(String[] args) {
 
     }
