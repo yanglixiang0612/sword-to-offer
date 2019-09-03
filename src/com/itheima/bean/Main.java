@@ -1,5 +1,6 @@
 package com.itheima.bean;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -17,9 +18,11 @@ import java.util.Set;
 *输出
 *针对每组数据输出一行数据，表示合并后的集合，要求从小到大输出，每个元素之间有一个空格隔开。
 */
+/*
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        */
+/*Scanner in = new Scanner(System.in);
 
         while(in.hasNext()){
             int m = in.nextInt();
@@ -32,6 +35,15 @@ public class Main {
                 System.out.print(num + " ");
             }
         }
+        ArrayList list = new ArrayList(20);
+*//*
+
+
 
     }
+
+}
+*/
+class A{
+
 }

@@ -15,6 +15,11 @@ public class Test23 {
 		3. 我们已经知道i左侧所有元素均小于根结点，那么再依次遍历右侧，看是否所有元素均大于根结点；若出现小于根结点的元素，则直接返回false；若右侧全都大于根结点，则：
 		4. 分别递归判断左/右子序列是否为后序序列；
 		*/
+    public static void main(String[] args) {
+        int[] arr = {1,4,3,6,10,8,5};
+        Test23 t = new Test23();
+        System.out.println(t.VerifySquenceOfBST(arr));
+    }
     public boolean VerifySquenceOfBST(int[] sequence) {
         if(sequence == null || sequence.length == 0) {
             return false;
